@@ -1,0 +1,132 @@
+/* =========================================================
+   style.css : nos modifications par-dessus Bootstrap
+   ========================================================= */
+
+/* ---- Nos couleurs (on les change ici, une seule fois) ---- */
+:root {
+  --orange: #ff5a1f;
+  --orange-fonce: #c9380a;
+  --saumon: #f8a98c;
+  --gris: #f2f2f2;
+}
+
+/* ---- Police générale + défilement doux vers les sections ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+/* Les titres utilisent la police arrondie de la maquette */
+h1, h2 {
+  font-family: "Amaranth", sans-serif;
+  color: var(--orange);
+}
+
+/* Espace autour de chaque section */
+section {
+  padding: 80px 0 20px; /* 80px en haut pour ne pas passer sous le menu fixe */
+}
+
+/* ---- Menu orange ---- */
+.navbar {
+  background-color: var(--orange);
+}
+.navbar .nav-link {
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  padding: 4px 10px !important;
+  margin: 2px;
+}
+/* le lien de la section où l'on se trouve (ajouté automatiquement par Bootstrap) */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  background-color: var(--orange-fonce);
+  color: #fff;
+}
+
+/* ---- Grande image d'accueil ---- */
+.hero {
+  min-height: 70vh;
+  background: url("../images/accueil.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 56px; /* hauteur du menu */
+}
+.hero h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Boîte grise aux coins arrondis (utilisée partout) ---- */
+.boite {
+  background-color: var(--gris);
+  border-radius: 25px;
+  padding: 25px;
+}
+
+/* petit titre orange dans les boîtes */
+.sous-titre {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* ---- Bouton orange ---- */
+.btn-orange {
+  background-color: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 8px 40px;
+}
+.btn-orange:hover {
+  background-color: var(--orange-fonce);
+  color: #fff;
+}
+
+/* ---- Icônes rondes orange (Nos activités) ---- */
+.icone-ronde {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+/* ---- Cartes des baptêmes (fond saumon) ---- */
+.carte-bapteme {
+  background-color: var(--saumon);
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.carte-bapteme img {
+  height: 200px;
+  object-fit: cover; /* l'image remplit la zone sans être déformée */
+}
+
+/* ---- Toutes les photos : coins arrondis + petite ombre ---- */
+.photo {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ---- Pied de page ---- */
+footer {
+  font-size: 0.85rem;
+}
