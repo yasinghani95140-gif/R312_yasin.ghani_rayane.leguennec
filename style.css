@@ -53,7 +53,7 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 56px; /* hauteur du menu */
+  margin-top: 56px; 
 }
 .hero h1 {
   color: #fff;
